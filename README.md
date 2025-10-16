@@ -46,3 +46,5 @@ terraform провайдера docker. (ищите в классификатор
 
 ### Решение
 
+![1](https://github.com/Ivan-Shkutov/ter-homeworks-01/blob/main/img/1.png)
+
