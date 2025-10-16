@@ -46,6 +46,24 @@ terraform провайдера docker. (ищите в классификатор
 
 ### Решение
 
+1. Скачиваем и устанавливаем Terraform на VM Ubuntu. Проверяем версию terrfotm --version.
+
+2. В файле personal.auto.tfvars допустимо сохранить личную, секретную информацию?(логины,пароли,ключи,токены итд).
+
+3. Выполняем код проекта. После выполнения в файле terraform.tfstate находим секретное содержимое созданного ресурса random_password.
+
+4. Выполняем terrafrom validate и появляются ошибки. Исправляем ошибки в файле main.tf и снова запускаем terrafrom validate.
+
+5. Выполняем terrafrom plan и видим, что все прошло без ошибок.
+
+6. docker ps. Далее меняем имя контейнера на hello_world.
+
+7. Выполняем terraform apply -auto-approvе. Чтобы уничтожить созданные ресурсы выполняем terraform destroy.
+
+8. Если в файле конфигурации есть параметр keep_locally – true, то образ не удалится. Необходимо заменить на false.
+
+
+   
 ![1](https://github.com/Ivan-Shkutov/ter-homeworks-01/blob/main/img/1.png)
 
 ![2](https://github.com/Ivan-Shkutov/ter-homeworks-01/blob/main/img/2.png)
